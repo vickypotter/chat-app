@@ -11,8 +11,11 @@
 <body>
   <div id="room-container">
     <% Object.keys(rooms).forEach(room => { %>
-      <div><%= room %></div>
-      <a href="/<%= room %>">Join</a>
+      <div style="display: flex;">
+        <div><%= room %></div>
+        <div>&nbsp;-&nbsp;</div>
+        <a href="/<%= room %>">Join</a> <br>
+      </div>
     <% }) %>
   </div>
   <form action="/room" method="POST">

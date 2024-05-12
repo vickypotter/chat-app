@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
   res.render('index', { rooms: rooms })
 })
 
+app.get('/social', (req, res) => {
+  console.log("social...")
+  res.render('social')
+})
+
 app.post('/room', (req, res) => {
   if (rooms[req.body.room] != null) {
     return res.redirect('/')
@@ -30,6 +35,8 @@ app.get('/:room', (req, res) => {
   }
   res.render('room', { roomName: req.params.room })
 })
+
+
 
 server.listen(3000)
 

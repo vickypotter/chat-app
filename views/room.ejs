@@ -23,14 +23,14 @@
       max-width: 1200px;
     }
 
-    #message-container div {
+    /* #message-container div {
       background-color: #CCC;
       padding: 5px;
     }
 
     #message-container div:nth-child(2n) {
       background-color: #FFF;
-    }
+    } */
 
     #send-container {
       position: fixed;
@@ -44,13 +44,52 @@
 
     #message-input {
       flex-grow: 1;
+      height: 35px;
+      border: none;
+      border-bottom: 1px solid gray;
+      background-color: #f5f5f5;
+      margin-right: 20px;
+    }
+
+    #message-input:focus-visible {
+      outline: none;
+      border-bottom: 2px solid gray;
+    }
+
+    #send-button {
+      width: 100px;
+      background: royalblue;
+      border: navajowhite;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: cursive;
+    }
+    .message-bubble {
+      width: fit-content;
+      border-radius: 5px;
+      padding: 7px;
+      background-color: #e1e1e1;
+      margin: 10px 0px;
+      font-family: cursive;
+    }
+    .self {
+      background-color: royalblue !important;
+      color: white;
+    }
+
+    .notice{
+      width: 100%;
+      background-color: transparent;
+      text-align: center;
+      color: #607D8B;
     }
   </style>
 </head>
 <body>
   <div id="message-container"></div>
   <form id="send-container">
-    <input type="text" id="message-input">
+    <input type="text" id="message-input" placeholder="Type your message here...">
     <button type="submit" id="send-button">Send</button>
   </form>
 </body>
